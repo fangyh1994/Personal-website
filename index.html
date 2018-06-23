@@ -1,0 +1,186 @@
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<script type="text/javascript">
+function doContact(){
+	try
+	{// Firefox, Opera 8.0+, Safari, IE7
+	    xmlHttp=new XMLHttpRequest();
+	}
+	catch(e)
+	{// Old IE
+		try
+		{
+	    	xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		catch(e)
+		{
+	    	alert ("Your browser does not support XMLHTTP!");
+	    	return;  
+		}
+	}
+	var url="contact.jsp?contact=" + "200";
+	xmlHttp.open("GET",url,false);
+	xmlHttp.send(null);
+	
+}
+</script>
+<div class="nav navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="margin-left: 0" href="#"><img src="http://flaticons.net/gd/makefg.php?i=icons/Application/User-Login.png&r=255&g=255&b=255" width="30" height="30" alt="Icon"></a>
+      <p class="navbar-text"><a href="#home" class="navbar-link about"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></p>
+      <p class="navbar-text"><a href="#aboutme" class="navbar-link about"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;About me</a></p>
+      <p class="navbar-text"><a href="#portfolio" class="navbar-link portofolio"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Portfolio</a></p>
+      <p class="navbar-text"><a href="#contact" class="navbar-link contact"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact</a></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Home Section -->
+<div id = "home">
+
+<div class="container sectionBox">
+  <!--       <img src="https://preview.ibb.co/dLcZ5v/IMG_1462898352020_V_Easy_Resize_com.jpg" alt="MyImage" class="img-responsive"> -->
+  <h2 class="text-center" style="padding:400px 0px 0px; color:black;">Personal Website</h2>   
+</div>
+</div>
+
+
+
+
+<!-- About Me Section -->
+<div id = "aboutme">
+</div>
+<h1 class="text-center">About Me</h1>
+<div class="container">
+  <div class="row">
+    <p class="text-muted text-center"><em>Welcome to my personal portofolio. I am Yehe Fang(my English name is Mark). Right now I'm a student in the ECE Master of Engingeering program at University of Waterloo. My main objective is to become a full stack developer. I've studied coding for 4-5 years, although not very productive in the first 3 years...Anyway, I want to create some awesome websites and apps in the future.</em>
+    </p>     
+  </div>
+</div>
+
+
+<!--Portfolio section-->
+<div id="portfolio"> 
+</div>
+
+<div id="portfolio-box">
+  <h1 class="text-center">Yehe Fang's Portfolio</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4"><img src="story_page.JPG" alt="Tribute-Page" class="img-thumbnail">
+        <h5>Story Page</h5>
+        <a href="https://codepen.io/Markfang/pen/BYreqZ" target="_blank"><p>View</p></a>
+      </div>
+      <div class="col-sm-4"><img src="portfolio_page.JPG" alt="MyPortofolio" class="img-thumbnail">
+        <h5>Portofolio Page</h5>
+        <a href="#" target="_blank"><p>View</p></a>
+      </div>
+      <div class="col-sm-4"><img src="survey_form.jpg" alt="SurveyForm" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Coming Soon</h5>
+        <a href="#"><p>View</p></a>
+      </div>
+    </div>
+  </div>
+  <div class = "container">
+    <div class="row">
+      <div class="col-sm-4"><img src="coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Coming Soon</h5>
+        <a href="#"><p>View</p></a>
+      </div>
+      <div class="col-sm-4"><img src="coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Coming Soon</h5>
+        <a href="#"><p>View</p></a>
+      </div>
+      <div class="col-sm-4"><img src="coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Coming Soon</h5>
+        <a href="#"><p>View</p></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--contact section-->
+<div id="contact">
+</div>
+
+<div class="col-xs-12">
+  <h2 class="text-muted text-center">Contact</h2>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="inputName" class="col-xs-2 control-label text-muted">Name</label>
+      <div class="col-xs-4">
+        <input type="text" class="form-control input-color" id="inputName" placeholder="Name">
+      </div>
+      <div class="col-xs-6">
+        <p class="text-muted">If you want to get in touch with me please complete this form.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-xs-2 control-label text-muted">Email</label>
+      <div class="col-xs-4">
+        <input type="email" class="form-control input-color" id="inputEmail" placeholder="Email">
+      </div>
+      <div class="col-xs-6">
+        <p class="text-muted">You can ask me whatever you wish, I'll be more than happy to answer.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber" class="col-xs-2 control-label text-muted">Phone Number</label>
+      <div class="col-xs-4">
+        <input type="text" class="form-control input-color" id="inputPhoneNumber" placeholder="Phone Number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="20">
+      </div>
+      <div class="col-xs-6">
+        <p class="text-muted">I would also appreciate if you'd send me any feedback regarding this page.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message" class="col-xs-2 control-label text-muted">Message</label>
+      <div class="col-xs-4">
+        <!--<input type="text" class="form-control input-color" id="inputMessage" placeholder="Message" rows="3">-->
+        <textarea class="form-control input-color" rows="3" placeholder="Message"></textarea>
+      </div>
+      <div class="col-xs-6">
+        <p class="text-muted">I will respond as soon as I can.</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-2"></div>
+      <div class="col-xs-4">
+        <button type="submit"  class="btn own-btn text-muted">Submit</button>
+        <button type="reset" class="btn own-btn text-muted">Reset Form</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--footer section-->
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; 2018</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li><a href="https://www.facebook.com/markfang1994" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://github.com/fangyh1994"><i class="fa fa-github" target="_blank"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yehe-fang-250786142/"><i class="fa fa-linkedin" target="_blank"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li><a href="#">Privacy Policy</a>
+            </li>
+            <li><a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--end row -->
+    </div>
+    <!--end form container-->
+  </footer>

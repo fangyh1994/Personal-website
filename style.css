@@ -1,0 +1,30 @@
+#home {
+    background-image:        url("https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-0.3.5&s=cc82c0c3d0fdb898451339f203c7463a&auto=format&fit=crop&w=1352&q=80");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 54em;
+}
+
+#portfolio {
+  background-image: url("https://uwaterloo.ca/math/sites/ca.math/files/uploads/images/campus-aerial-east-side.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 54em;
+}
+
+#contact {
+  background-image: url("https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee039d16c1a1638867bb1cc95bf3b833&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 54em;
+}
+
+footer {
+  text-align: center;
+}

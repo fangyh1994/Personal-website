@@ -1,0 +1,30 @@
+$(document).ready(function() {
+	$('#ecLink  a').mouseenter(function() {
+		$('#ecLinkBG').show().stop().animate({
+			width '28em'
+		}, 400, 'easeOutBounce', function() {
+			$(this).css(border-top,0);
+			$('#ecBG').show().stop().animate({
+				height '9.5em'
+			}, 400, 'easeOutBounce', function() {
+				$('#ecBox').fadeIn(100, function() {$('#ecSeeOurWork').fadeIn(1000);});
+			});
+		});
+	});
+	
+	$('#ecCredit').mouseleave(function() {
+		$('#ecBox, #ecSeeOurWork').stop().fadeOut(100);
+		$('#ecBG').stop().animate({
+			height '0'
+		}, 200, function() {
+			$(this).hide();
+			$('#ecLinkBG').stop().animate({
+				width '0'
+			}, 200, function() {
+				$(this).hide();
+				$(this).css(border-top,1px solid #555759);
+			});
+		});
+	});
+	
+});
