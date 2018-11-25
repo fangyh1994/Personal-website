@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -73,7 +73,7 @@ $('#contact-form').submit(function (event) {
 
 <div class="container sectionBox">
   <!--       <img src="https://preview.ibb.co/dLcZ5v/IMG_1462898352020_V_Easy_Resize_com.jpg" alt="MyImage" class="img-responsive"> -->
-  <h2 class="text-center" style="padding:400px 0px 0px; color:black;">Personal Website</h2>   
+  <h2 class="text-center" style="padding:400px 0px 0px; color:black;"></h2>   
 </div>
 </div>
 
@@ -82,55 +82,72 @@ $('#contact-form').submit(function (event) {
 
 <!-- About Me Section -->
 <div id = "aboutme">
-</div>
-<h1 class="text-center">About Me</h1>
-<div class="container">
-  <div class="row">
-    <p class="text-muted text-center"><em>Welcome to my personal portofolio. I am Yehe Fang(my English name is Mark). Right now I'm a student in the ECE Master of Engingeering program at University of Waterloo. My main objective is to become a full stack developer. I've studied coding for 4-5 years, although not very productive in the first 3 years...Anyway, I want to create some awesome websites and apps in the future.</em>
-    </p>     
+  <div class="section" style="padding:50px 0px 50px;">
+    <h1 class="hero">Welcome to my personal website</h1>
+    <div class="container">
+    <h3 class="hero text-muted text-center">My name is Yehe Fang(my English name is Mark). I'm a student at University of Waterloo in the ECE Master of Engingeering program. I've studied software engineering for 2-3 years. I love learning new things, and I am passionate about my work.</h3>
+    </div>
+    <a href="./resumepage.html"><div class="resume"><span>About me (click to see my experience)</span></div></a>
   </div>
-</div>
 
+  
+</div>
 
 <!--Portfolio section-->
 <div id="portfolio"> 
 </div>
 
 <div id="portfolio-box">
-  <h1 class="text-center">Yehe Fang's Portfolio</h1>
+  <h1 class="text-center">My Portfolio</h1>
   <div class="container">
     <div class="row">
-      <div class="col-sm-4"><img src="portfolio_page.JPG" alt="MyPortofolio" class="img-thumbnail">
-        <h5>Portofolio Page</h5>
-        <a href="#" target="_blank"><p>View</p></a>
-      </div>
-      <div class="col-sm-4"><img src="project_manager.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+      <div class="col-sm-4"><img src="./img/project_manager.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
         <h5 style="margin-top: 25px">"Project Manager" Android App</h5>
         <a href="https://github.com/fangyh1994/ProjectManagerAPP"><p>View</p></a>
       </div>
-      <div class="col-sm-4"><img src="job_recommendation_system.jpg" alt="SurveyForm" class="img-thumbnail mx-auto">
+      <div class="col-sm-4"><img src="./img/job_recommendation_system.jpg" alt="SurveyForm" class="img-thumbnail mx-auto">
         <h5 style="margin-top: 25px">Job Recommendation System</h5>
         <a href="https://github.com/fangyh1994/JobRecommendationSystem"><p>View</p></a>
+      </div>
+      <div class="col-sm-4"><img src="./img/Nodejs_app.png" alt="Nodejs_app" class="img-thumbnail">
+        <h5>Node.js Todo Application</h5>
+        <a href="https://github.com/fangyh1994/Node.js-App" target="_blank"><p>View</p></a>
       </div>
     </div>
   </div>
   <div class = "container">
     <div class="row">
-      <div class="col-sm-4"><img src="coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
-        <h5 style="margin-top: 25px">Social media web app(on going)</h5>
+      <div class="col-sm-4"><img src="./img/React_app.png" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">React web app(Express, MongoDB, React)</h5>
         <a href="https://github.com/Huqicheng/nodejs-social-media"><p>View</p></a>
       </div>
-      <div class="col-sm-4"><img src="coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
-        <h5 style="margin-top: 25px">Coming Soon</h5>
-        <a href="#"><p>View</p></a>
+      <div class="col-sm-4"><img src="./img/chat_app.png" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Chat room(Node.js)</h5>
+        <a href=" https://gentle-sea-29510.herokuapp.com/"><p>View</p></a>
       </div>
-      <div class="col-sm-4"><img src="coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
-        <h5 style="margin-top: 25px">Coming Soon</h5>
+      
+      <div class="col-sm-4"><img src="./img/coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Hyperspectral Data Endmember Extraction(C++ project)</h5>
         <a href="#"><p>View</p></a>
       </div>
     </div>
   </div>
-</div>
+  <div class = "container">
+    <div class="row">
+      <div class="col-sm-4"><img src="./img/coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Yelp Data Analysis</h5>
+        <a href="https://github.com/Huqicheng/nodejs-social-media"><p>View</p></a>
+      </div>
+      <div class="col-sm-4"><img src="./img/coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Seating map design(Angular)</h5>
+        <a href="#"><p>View</p></a>
+      </div>
+      <div class="col-sm-4"><img src="./img/coming_soon.jpg" alt="Coming-Soon" class="img-thumbnail mx-auto">
+        <h5 style="margin-top: 25px">Security cameras optimization</h5>
+        <a href="#"><p>View</p></a>
+      </div>
+    </div>
+  </div>
 
 <!--contact section-->
 <div id="contact">

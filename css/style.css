@@ -1,0 +1,100 @@
+#home {
+    background-image:        url("https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-0.3.5&s=cc82c0c3d0fdb898451339f203c7463a&auto=format&fit=crop&w=1352&q=80");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50em;
+}
+
+#portfolio {
+  background-image: url("https://uwaterloo.ca/math/sites/ca.math/files/uploads/images/campus-aerial-east-side.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30em;
+}
+
+#contact {
+  background-image: url("https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee039d16c1a1638867bb1cc95bf3b833&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40em;
+}
+
+footer {
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  padding: 30px 0 50px 0;
+  background: #333;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  color: #444;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Roboto, 'Open Sans', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Roboto, 'Open Sans', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.hero {
+  font-family: 'Roboto Slab', sans-serif;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+h1.hero {
+  font-size: 45px;
+}
+
+h2.hero {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+h1.hero:after {
+  content: "";
+  width: 300px;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.resume {
+  color: white;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.resume span {
+  display: inline;
+  border: 1px solid white;
+  padding: 8px 13px;
+  font-size: 20px;
+  transition: background 0.15s linear;
+}
+
+.resume span:hover {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
