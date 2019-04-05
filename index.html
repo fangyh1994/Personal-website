@@ -2,8 +2,9 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+/*
 function doContact(){
 	try
 	{// Firefox, Opera 8.0+, Safari, IE7
@@ -26,34 +27,59 @@ function doContact(){
 	xmlHttp.send(null);
 	
 }
-
-//sending e-mail when you submit a form.
-/*
-var URL = '<api-gateway-stage-url>/contact'
-$('#contact-form').submit(function (event) {
-  event.preventDefault()
- 
-  var data = {
-    name: $('#name-input').val(),
-    email: $('#email-input').val(),
-    description: $('#description-input').val()
-  }
- 
-  $.ajax({
-    type: 'POST',
-    url: URL,
-    dataType: 'json',
-    contentType: 'application/json',
-    data: JSON.stringify(data),
-    success: function () {
-      // clear form and show a success message
-    },
-    error: function () {
-      // show an error message
-    }
-  })
-})
 */
+
+function submitToAPI (e) {
+	var URL = "https://ag7xflpq76.execute-api.us-east-1.amazonaws.com/dev/contact-me"
+	
+    var Namere = /[A-Za-z]{1}[A-Za-z]/;
+    if (!Namere.test($("#inputName").val())) {
+                 alert ("Name can not less than 2 char");
+        return;
+    }
+    var mobilere = /[0-9]{10}/;
+    if (!mobilere.test($("#inputPhoneNumber").val())) {
+        alert ("Please enter valid mobile number");
+        return;
+    }
+    var emailre = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+    if (!emailre.test($("#inputEmail").val())) {
+        alert ("Please enter valid email address");
+        return;
+    }
+
+   var name = $("#inputName").val();  
+   var email = $("#inputEmail").val();
+   var phone = $("#inputPhoneNumber").val();
+   var desc = $("#inputMessage").val();
+   var data = {
+      name : name,
+      email : email,
+      phone : phone,
+      desc : desc
+    };
+   $.ajax({
+     type: "POST",
+     url : "https://ag7xflpq76.execute-api.us-east-1.amazonaws.com/dev/contact-me",
+     dataType: "json",
+     crossDomain: "true",
+     contentType: "application/json",
+     data: JSON.stringify(data),
+  
+     success: function () {
+       // clear form and show a success message
+       alert("Successful");
+       document.getElementById("contact-form").reset();
+   	   location.reload();
+     },
+     error: function () {
+       // show an error message
+       alert("UnSuccessful");
+     }});
+   console.log(JSON.stringify(data));
+   
+}
+
 </script>
 <div class="nav navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -175,7 +201,7 @@ $('#contact-form').submit(function (event) {
       </div>
     </div>
     <div class="form-group">
-      <label for="phoneNumber" class="col-xs-2 control-label text-muted">Phone Number</label>
+      <label for="inputPhoneNumber" class="col-xs-2 control-label text-muted">Phone Number</label>
       <div class="col-xs-4">
         <input type="text" class="form-control input-color" id="inputPhoneNumber" placeholder="Phone Number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="20">
       </div>
@@ -184,10 +210,9 @@ $('#contact-form').submit(function (event) {
       </div>
     </div>
     <div class="form-group">
-      <label for="message" class="col-xs-2 control-label text-muted">Message</label>
+      <label for="inputMessage" class="col-xs-2 control-label text-muted">Message</label>
       <div class="col-xs-4">
-        <!--<input type="text" class="form-control input-color" id="inputMessage" placeholder="Message" rows="3">-->
-        <textarea class="form-control input-color" rows="3" placeholder="Message"></textarea>
+        <textarea class="form-control input-color" rows="3" id="inputPhoneNumber" placeholder="Message"></textarea>
       </div>
       <div class="col-xs-6">
         <p class="text-muted">I will respond as soon as I can.</p>
@@ -196,7 +221,7 @@ $('#contact-form').submit(function (event) {
     <div class="form-group">
       <div class="col-xs-2"></div>
       <div class="col-xs-4">
-        <button type="submit"  class="btn own-btn text-muted">Submit</button>
+        <button type="button" class="btn own-btn text-muted" onclick="submitToAPI()">Submit</button>
         <button type="reset" class="btn own-btn text-muted">Reset Form</button>
       </div>
     </div>
